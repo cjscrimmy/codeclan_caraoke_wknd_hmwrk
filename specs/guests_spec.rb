@@ -12,4 +12,8 @@ class TestGuests < MiniTest::Test
     def test_guest_has_name()
         assert_equal("Jimmy", @guest1.name)
     end
+
+    def test_guest_has_age()
+        assert_equal(30, @guest1.age)
+    end
 end
