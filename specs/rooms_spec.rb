@@ -24,4 +24,8 @@ class TestRooms < MiniTest::Test
     def test_room_has_name()
         assert_equal("Blues Room", @rooms.name)
     end
+
+    def test_room_has_guests()
+        assert_equal(2, @guests.count())
+    end
 end
