@@ -12,4 +12,8 @@ class TestSongs < MiniTest::Test
     def test_song_has_title()
         assert_equal("We Will Rock You", @song1.title)
     end
+
+    def test_song_has_play_time()
+        assert_equal(5, @song1.play_time)
+    end
 end
