@@ -42,4 +42,9 @@ class TestRooms < MiniTest::Test
         @rooms.check_guest_out(@guest1)
         assert_equal(1, @guests.length())
     end
+
+    def test_new_song_has_been_added_to_room()
+        @rooms.add_song(@song3)
+        assert_equal(3, @songs_in_room.length())
+    end
 end

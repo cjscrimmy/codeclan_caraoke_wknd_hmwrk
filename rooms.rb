@@ -14,4 +14,8 @@ class Rooms
     def check_guest_out(guest_to_check_out)
         @guests.delete(guest_to_check_out)
     end
+
+    def add_song(new_song)
+        @songs.push(new_song)
+    end
 end
