@@ -13,11 +13,15 @@ class TestRooms < MiniTest::Test
         @guest3 = Guests.new("Jill", 31)
         @guests = [@guest1, @guest2]
 
-        @song1 = Songs.new("Midnight Train", 6)
-        @song2 = Songs.new("Catfish Blues", 4)
-        @song3 = Songs.new("Hilltop Jazz", 3) 
+        @song1 = Songs.new("Midnight Train to Georgia", 4, "Gladys Knight & The Pips")
+        @song2 = Songs.new("Catfish Blues", 4, "Muddy Waters")
+        @song3 = Songs.new("Woke Up This Morning", 4, "Lightnin' Hopkins") 
         @songs_in_room = [@song1, @song2]
 
-        #@rooms = 
+        @rooms = Rooms.new("Blues Room", @guests, @songs_in_room)
+    end
+
+    def test_room_has_name()
+        assert_equal("Blues Room", @rooms.name)
     end
 end
