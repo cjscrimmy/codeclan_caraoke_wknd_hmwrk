@@ -32,4 +32,9 @@ class TestRooms < MiniTest::Test
     def test_room_has_songs()
         assert_equal(2, @songs_in_room.length())
     end
+
+    def test_new_guest_has_been_checked_in()
+        @rooms.check_guest_in(@guest3)
+        assert_equal(3, @guests.length())
+    end
 end

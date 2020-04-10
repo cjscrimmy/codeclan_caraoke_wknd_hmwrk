@@ -7,4 +7,7 @@ class Rooms
         @songs = songs
     end
 
+    def check_guest_in(new_guest)
+        @guests.push(new_guest)
+    end
 end
